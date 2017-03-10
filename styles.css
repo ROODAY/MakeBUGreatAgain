@@ -1,31 +1,48 @@
-body, html {
+@-webkit-keyframes GradientAnim {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@-moz-keyframes GradientAnim {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@keyframes GradientAnim { 
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+
+html, * {
 	padding: 0;
 	margin: 0;
 }
 
+body {
+	overflow: hidden;
+	font-family: 'Open Sans', sans-serif;
+}
+
 div {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	background: linear-gradient(219deg, #ba6103, #fae402);
 	background-size: 400% 400%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 
-	-webkit-animation: AnimationName 0s ease infinite;
-	-moz-animation: AnimationName 0s ease infinite;
-	animation: AnimationName 0s ease infinite;
+	-webkit-animation: GradientAnim 0s ease infinite;
+	-moz-animation: GradientAnim 0s ease infinite;
+	animation: GradientAnim 0s ease infinite;
+}
 
-	@-webkit-keyframes AnimationName {
-	    0%{background-position:0% 94%}
-	    50%{background-position:100% 7%}
-	    100%{background-position:0% 94%}
-	}
-	@-moz-keyframes AnimationName {
-	    0%{background-position:0% 94%}
-	    50%{background-position:100% 7%}
-	    100%{background-position:0% 94%}
-	}
-	@keyframes AnimationName { 
-	    0%{background-position:0% 94%}
-	    50%{background-position:100% 7%}
-	    100%{background-position:0% 94%}
-	}
+h1 {
+	font-family: 'Monoton', cursive;
+	font-size: 3rem;
+}
+
+canvas {
+	position: fixed;
 }
