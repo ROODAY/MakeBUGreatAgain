@@ -11,7 +11,7 @@ window.onload = function() {
 	var canvas = document.getElementById('c');
 
 	listener.sequence_combo("up up down down left right left right b a enter", function() {
-	    window.location.href = "https://makebu.slack.com/";
+	    window.location.href = "http://make.bu.edu/";
 	}, true);
 
     if (canvas.getContext) {
